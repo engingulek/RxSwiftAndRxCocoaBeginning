@@ -13,6 +13,9 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private let disposeBag = DisposeBag()
     
+    @IBOutlet weak var badgeText: UILabel!
+    
+    
     // menüde yer alacak kahve verilerimizi table view’e reactive bir şekilde bağlamaya geldi. Table view’in bu verilere reactive bir şekilde bağlanması için veri yapımızın da reactive olması gerekmektedir.
    // Bunu sağlamak için coffees değişkenini Observable yapmamız gerekiyor. Kodu aşağıdaki şekilde güncellememiz gerekiyor.
     private lazy var coffees: Observable<[Coffee]> = {
@@ -52,6 +55,12 @@ class MenuViewController: UIViewController {
                 if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow { // Table view’de seçilen satırı, seçili durumundan çıkarıyoruz.
                   self?.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
                 }
+              })
+              .disposed(by: disposeBag)
+        
+        ShoppingCart.shared.getTotalCount()
+              .subscribe(onNext: { [weak self] totalOrderCount in
+                  self?.badgeText.text = totalOrderCount != 0 ? "\(totalOrderCount)" : nil
               })
               .disposed(by: disposeBag)
     }

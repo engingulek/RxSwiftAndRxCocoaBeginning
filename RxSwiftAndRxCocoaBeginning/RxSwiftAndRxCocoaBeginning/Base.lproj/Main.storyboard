@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-Z1-qTm">
-                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <rect key="frame" x="0.0" y="118" width="390" height="726"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="coffeCell" rowHeight="108" id="jND-40-mQf" customClass="CoffeTableViewCell" customModule="RxSwiftAndRxCocoaBeginning" customModuleProvider="target">
@@ -111,18 +111,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm1-Le-VXm">
+                                <rect key="frame" x="117" y="91" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ntI-Rg-qo4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QAo-Z1-qTm" firstAttribute="leading" secondItem="ntI-Rg-qo4" secondAttribute="leading" id="3AY-4K-nMo"/>
-                            <constraint firstAttribute="bottom" secondItem="QAo-Z1-qTm" secondAttribute="bottom" id="B8u-MY-WgY"/>
-                            <constraint firstItem="QAo-Z1-qTm" firstAttribute="trailing" secondItem="ntI-Rg-qo4" secondAttribute="trailing" id="F6z-z4-4tx"/>
-                            <constraint firstItem="QAo-Z1-qTm" firstAttribute="top" secondItem="ntI-Rg-qo4" secondAttribute="top" id="Qkh-77-uUD"/>
+                            <constraint firstItem="QAo-Z1-qTm" firstAttribute="top" secondItem="Rm1-Le-VXm" secondAttribute="bottom" constant="6" id="1c4-nA-xIo"/>
+                            <constraint firstItem="QAo-Z1-qTm" firstAttribute="trailing" secondItem="ntI-Rg-qo4" secondAttribute="trailing" id="8DP-mj-EMw"/>
+                            <constraint firstAttribute="bottom" secondItem="QAo-Z1-qTm" secondAttribute="bottom" id="HPw-D5-DxE"/>
+                            <constraint firstItem="QAo-Z1-qTm" firstAttribute="leading" secondItem="ntI-Rg-qo4" secondAttribute="leading" id="LHk-Uf-Xpj"/>
+                            <constraint firstItem="Rm1-Le-VXm" firstAttribute="top" secondItem="ntI-Rg-qo4" secondAttribute="top" id="ZwK-MM-npM"/>
+                            <constraint firstItem="Rm1-Le-VXm" firstAttribute="leading" secondItem="ntI-Rg-qo4" secondAttribute="leading" constant="117" id="aHy-sA-nda"/>
+                            <constraint firstItem="ntI-Rg-qo4" firstAttribute="trailing" secondItem="Rm1-Le-VXm" secondAttribute="trailing" constant="142" id="fkj-wi-cNL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="PtN-X0-fqJ"/>
                     <connections>
+                        <outlet property="badgeText" destination="Rm1-Le-VXm" id="B8g-w3-4cG"/>
                         <outlet property="tableView" destination="QAo-Z1-qTm" id="ch3-c8-gjB"/>
                         <segue destination="8VN-Lg-tIl" kind="show" identifier="OrderCofeeSegue" id="dsF-Il-xNU"/>
                     </connections>

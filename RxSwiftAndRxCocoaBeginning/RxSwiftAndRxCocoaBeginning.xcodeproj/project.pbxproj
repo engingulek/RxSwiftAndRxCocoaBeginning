@@ -18,6 +18,8 @@
 		7DB6052729841855005E1E09 /* CoffeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB6052629841855005E1E09 /* CoffeTableViewCell.swift */; };
 		7DB60529298418C1005E1E09 /* Coffe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB60528298418C1005E1E09 /* Coffe.swift */; };
 		7DB6052B298418FD005E1E09 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB6052A298418FD005E1E09 /* MenuViewController.swift */; };
+		7DB6052D29841C8C005E1E09 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB6052C29841C8C005E1E09 /* ShoppingCart.swift */; };
+		7DB6052F29841CBA005E1E09 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB6052E29841CBA005E1E09 /* CartItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		7DB6052629841855005E1E09 /* CoffeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTableViewCell.swift; sourceTree = "<group>"; };
 		7DB60528298418C1005E1E09 /* Coffe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffe.swift; sourceTree = "<group>"; };
 		7DB6052A298418FD005E1E09 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		7DB6052C29841C8C005E1E09 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		7DB6052E29841CBA005E1E09 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				7DB6052629841855005E1E09 /* CoffeTableViewCell.swift */,
 				7DB60528298418C1005E1E09 /* Coffe.swift */,
 				7DB6052A298418FD005E1E09 /* MenuViewController.swift */,
+				7DB6052C29841C8C005E1E09 /* ShoppingCart.swift */,
+				7DB6052E29841CBA005E1E09 /* CartItem.swift */,
 			);
 			path = RxSwiftAndRxCocoaBeginning;
 			sourceTree = "<group>";
@@ -160,10 +166,12 @@
 			files = (
 				7DB60512298415EA005E1E09 /* ViewController.swift in Sources */,
 				7DB6052B298418FD005E1E09 /* MenuViewController.swift in Sources */,
+				7DB6052F29841CBA005E1E09 /* CartItem.swift in Sources */,
 				7DB6052729841855005E1E09 /* CoffeTableViewCell.swift in Sources */,
 				7DB6050E298415EA005E1E09 /* AppDelegate.swift in Sources */,
 				7DB60529298418C1005E1E09 /* Coffe.swift in Sources */,
 				7DB60510298415EA005E1E09 /* SceneDelegate.swift in Sources */,
+				7DB6052D29841C8C005E1E09 /* ShoppingCart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
